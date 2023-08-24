@@ -6,19 +6,22 @@
  */
 
 import React from 'react';
-import type {PropsWithChildren} from 'react';
-import {SafeAreaView, StyleSheet} from 'react-native';
+import {StyleSheet} from 'react-native';
 import {useTranslation} from 'react-i18next';
 import {AppNavigator} from './navigation/AppNavigator';
 import 'react-native-gesture-handler';
+import {
+  SafeAreaProvider,
+  useSafeAreaInsets,
+} from 'react-native-safe-area-context';
 
 function App(): JSX.Element {
   const {t} = useTranslation();
 
   return (
-    <SafeAreaView style={{flex: 1}}>
+    <SafeAreaProvider>
       <AppNavigator />
-    </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
 

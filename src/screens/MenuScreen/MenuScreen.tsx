@@ -1,11 +1,14 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import {ViewContainer} from '../../components/ViewContainer/ViewContainer';
 
 export const MenuScreen = () => {
   return (
-    <View style={styles.container}>
+    <ViewContainer
+      styles={{flexDirection: 'column', justifyContent: 'space-between'}}>
       <Text>Menu</Text>
-    </View>
+      <Text>Menu</Text>
+    </ViewContainer>
   );
 };
 

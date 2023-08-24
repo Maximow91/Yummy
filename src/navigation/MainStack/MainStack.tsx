@@ -16,7 +16,10 @@ const MainStack = createNativeStackNavigator<MainStackParamList>();
 
 export const MainStackNavigator = () => {
   return (
-    <MainStack.Navigator>
+    <MainStack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}>
       <MainStack.Screen name="Main" component={MenuScreen} />
       <MainStack.Screen name="Products" component={ProductsScreen} />
     </MainStack.Navigator>

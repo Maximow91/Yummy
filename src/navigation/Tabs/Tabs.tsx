@@ -14,6 +14,10 @@ export const TabNavigator = () => {
     <Tab.Navigator
       screenOptions={{
         headerShown: false,
+        tabBarStyle: {
+          height: 75,
+          borderTopWidth: 1,
+        },
       }}>
       <Tab.Screen
         name="MainStack"
